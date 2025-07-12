@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeoVision</title>
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌍</text></svg>">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/examples/js/loaders/GLTFLoader.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/examples/js/controls/OrbitControls.js"></script>
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="animated-bg">
+        <div class="floating-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+            <div class="shape shape-4"></div>
+            <div class="shape shape-5"></div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <i class="fas fa-globe-americas"></i>
+                    <span>GeoVision</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#" class="nav-link">Accueil</a></li>
+                    <li><a href="#continents" class="nav-link">Continents</a></li>
+                    <li><a href="#reliefs" class="nav-link">Reliefs</a></li>
+                    <li><a href="#cartographie" class="nav-link">Cartographie</a></li>
+                    <li><a href="#stats" class="nav-link">Statistiques</a></li>
+                    <li><a href="#Équipe" class="nav-link">Équipe</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section  class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Explorez le monde autrement
+                    <span class="gradient-text">Apprenez la géographie</span>
+                </h1>
+                <p class="hero-description">
+                    Découvrez notre planète à travers une expérience interactive unique. 
+                    Explorez les continents, apprenez les capitales et plongez dans l'univers fascinant de la géographie mondiale.
+                </p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary">
+                        <i class="fas fa-rocket"></i>
+                        Commencer l'exploration
+                    </button>
+                    <button class="btn btn-secondary">
+                        <i class="fas fa-play"></i>
+                        Voir la démo
+                    </button>
+                </div>
+            </div>
+            <div class="hero-globe">
+                <div class="globe">
+                    <div class="go"></div>
+                    <div class="hand"></div>
+                     <div class="hand1"></div>
+                  </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="continents" class="features">
+        <div class="container">
+            <h2 class="section-title">Continents & Pays</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-globe-africa"></i>
+                    </div>
+                    <h3>Afrique</h3>
+                    <p>Découvrez les 54 pays africains, leurs capitales, cultures et richesses naturelles.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-globe-americas"></i>
+                    </div>
+                    <h3>Amériques</h3>
+                    <p>Explorez l'Amérique du Nord et du Sud avec leurs paysages variés et cultures.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-globe-asia"></i>
+                    </div>
+                    <h3>Asie</h3>
+                    <p>Plongez dans le plus grand continent avec ses 48 pays et civilisations millénaires.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-globe-europe"></i>
+                    </div>
+                    <h3>Europe</h3>
+                    <p>Découvrez les 44 pays européens et leur histoire riche et diversifiée.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-globe-oceania"></i>
+                    </div>
+                    <h3>Océanie</h3>
+                    <p>Explorez les îles du Pacifique et l'Australie avec leurs écosystèmes uniques.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-snowflake"></i>
+                    </div>
+                    <h3>Antarctique</h3>
+                    <p>Découvrez le continent glacé et ses territoires internationaux.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reliefs Section -->
+    <section id="reliefs" class="reliefs">
+        <div class="container">
+            <h2 class="section-title">Reliefs & Climats</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-mountain"></i>
+                    </div>
+                    <h3>Montagnes</h3>
+                    <p>Explorez les chaînes montagneuses du monde et leurs formations géologiques.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-water"></i>
+                    </div>
+                    <h3>Océans & Mers</h3>
+                    <p>Découvrez les océans, mers et leurs écosystèmes marins fascinants.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-tree"></i>
+                    </div>
+                    <h3>Forêts</h3>
+                    <p>Explorez les différents types de forêts et leurs climats associés.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-sun"></i>
+                    </div>
+                    <h3>Déserts</h3>
+                    <p>Découvrez les déserts chauds et froids du monde et leurs adaptations.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-umbrella"></i>
+                    </div>
+                    <h3>Zones Climatiques</h3>
+                    <p>Apprenez les différents climats et leurs caractéristiques géographiques.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-fire"></i>
+                    </div>
+                    <h3>Volcans</h3>
+                    <p>Explorez les volcans actifs et leurs impacts sur la géographie.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cartographie Section -->
+    <section id="cartographie" class="cartographie">
+        <div class="container">
+            <h2 class="section-title">Cartographie & SIG</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-map"></i>
+                    </div>
+                    <h3>Cartes Interactives</h3>
+                    <p>Utilisez nos cartes interactives pour explorer le monde en temps réel.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-location-dot"></i>
+                    </div>
+                    <h3>GPS & Navigation</h3>
+                    <p>Apprenez les principes du GPS et de la navigation moderne.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-satellite"></i>
+                    </div>
+                    <h3>Télédétection</h3>
+                    <p>Découvrez l'utilisation des satellites pour l'observation terrestre.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>Systèmes d'Information</h3>
+                    <p>Maîtrisez les SIG pour analyser les données géographiques.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Cartes Thématiques</h3>
+                    <p>Créez et interprétez des cartes thématiques spécialisées.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-layer-group"></i>
+                    </div>
+                    <h3>Superposition de Données</h3>
+                    <p>Apprenez à superposer différentes couches d'information géographique.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section id="stats" class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number" data-target="195">195</div>
+                    <div class="stat-label">Pays étudiés</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" data-target="7">7</div>
+                    <div class="stat-label">Continents explorés</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" data-target="1200+">1200+</div>
+                    <div class="stat-label">Utilisateurs actifs</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" data-target="1000">1000</div>
+                    <div class="stat-label">Quiz complétés</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quiz Section -->
+    <section id="quiz" class="quiz">
+        <div class="container">
+            <h2 class="section-title">Quiz Interactifs</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-flag"></i>
+                    </div>
+                    <h3>Drapeaux du Monde</h3>
+                    <p>Testez vos connaissances sur les drapeaux de tous les pays du monde.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3>Capitales</h3>
+                    <p>Apprenez et mémorisez les capitales de tous les pays avec nos quiz interactifs.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-map-marked-alt"></i>
+                    </div>
+                    <h3>Frontières</h3>
+                    <p>Découvrez les frontières des pays et leurs pays voisins.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-mountain"></i>
+                    </div>
+                    <h3>Reliefs</h3>
+                    <p>Identifiez les montagnes, rivières et reliefs principaux du monde.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3>Géographie Générale</h3>
+                    <p>Quiz complet sur la géographie physique et humaine mondiale.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3>Défis Quotidiens</h3>
+                    <p>Participez à nos défis quotidiens et comparez vos scores avec d'autres joueurs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="blog">
+        <div class="container">
+            <h2 class="section-title">Blog Géopolitique</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-newspaper"></i>
+                    </div>
+                    <h3>Actualités Géopolitiques</h3>
+                    <p>Restez informé des dernières actualités géopolitiques et leurs impacts géographiques.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Environnement</h3>
+                    <p>Découvrez les enjeux environnementaux et leurs conséquences géographiques.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Démographie</h3>
+                    <p>Analysez les évolutions démographiques et leurs impacts sur la géographie mondiale.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-industry"></i>
+                    </div>
+                    <h3>Économie & Commerce</h3>
+                    <p>Comprenez les flux commerciaux et économiques à travers le monde.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Pédagogie</h3>
+                    <p>Conseils et méthodes pour enseigner la géographie de manière interactive.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>Innovations</h3>
+                    <p>Découvrez les nouvelles technologies et innovations en géographie.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Prêt à explorer le monde ?</h2>
+                <p>Rejoignez des milliers d'étudiants et d'enseignants qui utilisent GeoVision pour apprendre la géographie de manière interactive.</p>
+                <button class="btn btn-primary btn-large">
+                    <i class="fas fa-compass"></i>
+                    Commencer maintenant
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="Équipe" class="team">
+        <div class="container">
+            <h2 class="section-title">Notre Équipe</h2>
+            <div class="team-grid">
+                <div class="team-member">
+                    <img src="images/team1.jpg" alt="Dhia Eddine Saied">
+                    <h3>Dhia Eddine Saied</h3>
+                    <p>FUll Stack Developper</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">Ils parlent de nous</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <p>“GeoVision m’a permis de redécouvrir la géographie de façon ludique et interactive. Bravo à l’équipe !”</p>
+                    <span>- Carlos, Professeur</span>
+                </div>
+                <div class="testimonial-card">
+                    <p>“Une plateforme intuitive et très utile pour mes révisions. Je recommande à tous les étudiants !”</p>
+                    <span>- Sofia, Étudiante</span>
+                </div>
+                <div class="testimonial-card">
+                    <p>“Les quiz sont super fun et m’ont aidé à apprendre les capitales du monde.”</p>
+                    <span>- Diego, Lycéen</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Contactez-nous</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Adresse</h4>
+                                <p>123 Rue de la Géographie<br>75001 Paris, France</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Téléphone</h4>
+                                <p>+33 1 23 45 67 89</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p>contact@geovision.fr</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h4>Horaires</h4>
+                                <p>Lun-Ven: 9h-18h<br>Sam: 10h-16h</p>
+                            </div>
+                        </div>
+                    </div>
+                    <form class="contact-form">
+                        <input type="text" name="name" placeholder="Votre nom" required>
+                        <input type="email" name="email" placeholder="Votre email" required>
+                        <textarea name="message" placeholder="Votre message" required></textarea>
+                        <button type="submit" class="btn btn-primary">Envoyer</button>
+                    </form>
+                </div>
+                <div class="contact-map">
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3843042.1840340816!2d-85.87903421463847!3d8.26981418206205!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6f4051d1ea7720c5%3A0x688bfb5039ef904f!2zR2VvdmlzacOzbiBQYW5hbcOh!5e1!3m2!1sfr!2stn!4v1752290447626!5m2!1sfr!2stn" 
+                                width="100%" 
+                                height="100%" 
+                                style="border:0;" 
+                                allowfullscreen="" 
+                                loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-globe-americas"></i>
+                        <span>GeoVision</span>
+                    </div>
+                    <p>Explorez le monde autrement avec notre plateforme éducative interactive dédiée à la géographie mondiale.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="#home">Accueil</a></li>
+                        <li><a href="#continents">Continents & Pays</a></li>
+                        <li><a href="#reliefs">Reliefs & Climats</a></li>
+                        <li><a href="#cartographie">Cartographie</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Ressources</h4>
+                    <ul>
+                        <li><a href="#stats">Statistiques</a></li>
+                        <li><a href="#quiz">Quiz</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Légal</h4>
+                    <ul>
+                        <li><a href="#">Mentions légales</a></li>
+                        <li><a href="#">Politique de confidentialité</a></li>
+                        <li><a href="#">Plan du site</a></li>
+                        <li><a href="#">CGU</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 GeoVision — Développé avec passion par Dhia. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- Three.js core -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<!-- Extensions (même version) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/examples/js/loaders/GLTFLoader.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/examples/js/controls/OrbitControls.js"></script>
+<!-- Ton script principal -->
+<script src="js/main.js"></script>
+
+<!-- Main JavaScript File -->
+<script src="js/main.js"></script>
+</body>
+</html>
