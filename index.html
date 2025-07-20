@@ -53,7 +53,7 @@
     </header>
 
     <!-- Hero Section -->
-    <section  class="hero">
+    <section class="hero">
         <div class="hero-container">
             <div class="hero-content">
                 <h1 class="hero-title">
@@ -65,13 +65,13 @@
                     Explorez les continents, apprenez les capitales et plongez dans l'univers fascinant de la géographie mondiale.
                 </p>
                 <div class="hero-buttons">
-                    <button class="btn btn-primary">
+                    <button class="btn btn-primary" id="btn-explorer">
                         <i class="fas fa-rocket"></i>
-                        Commencer l'exploration
+                        <span>Commencer l'exploration</span>
                     </button>
-                    <button class="btn btn-secondary">
+                    <button class="btn btn-secondary" id="btn-demo">
                         <i class="fas fa-play"></i>
-                        Voir la démo
+                        <span>Voir la démo</span>
                     </button>
                 </div>
             </div>
@@ -79,8 +79,8 @@
                 <div class="globe">
                     <div class="go"></div>
                     <div class="hand"></div>
-                     <div class="hand1"></div>
-                  </div>
+                    <div class="hand1"></div>
+                </div>
             </div>
         </div>
     </section>
@@ -370,9 +370,9 @@
             <div class="cta-content">
                 <h2>Prêt à explorer le monde ?</h2>
                 <p>Rejoignez des milliers d'étudiants et d'enseignants qui utilisent GeoVision pour apprendre la géographie de manière interactive.</p>
-                <button class="btn btn-primary btn-large">
+                <button class="btn btn-primary btn-large" id="btn-start-now">
                     <i class="fas fa-compass"></i>
-                    Commencer maintenant
+                    <span>Commencer maintenant</span>
                 </button>
             </div>
         </div>
@@ -384,9 +384,9 @@
             <h2 class="section-title">Notre Équipe</h2>
             <div class="team-grid">
                 <div class="team-member">
-                    <img src="images/team1.jpg" alt="Dhia Eddine Saied">
+                    <img src="images/team1.jpg" alt="Dhia Eddine Saied" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOTAiIGhlaWdodD0iOTAiIHZpZXdCb3g9IjAgMCA5MCA5MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iNDUiIGN5PSI0NSIgcj0iNDUiIGZpbGw9IiM0QTkwRTIiLz4KPHN2ZyB4PSIyNSIgeT0iMjAiIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjIiPgo8cGF0aCBkPSJtMjAgMTctMiAyLTYtNi02IDYtMi0yIDgtOHoiLz4KPHN2ZyB4PSIyNSIgeT0iNTAiIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjIiPgo8Y2lyY2xlIGN4PSIxMiIgY3k9IjEyIiByPSIzIi8+CjxwYXRoIGQ9Im0xMiAxIDEwIDEwLTEwIDEwTDIgMTJsNi02eiIvPgo8L3N2Zz4KPC9zdmc+Cg=='">
                     <h3>Dhia Eddine Saied</h3>
-                    <p>FUll Stack Developper</p>
+                    <p>Full Stack Developer</p>
                 </div>
             </div>
         </div>
@@ -398,15 +398,15 @@
             <h2 class="section-title">Ils parlent de nous</h2>
             <div class="testimonials-grid">
                 <div class="testimonial-card">
-                    <p>“GeoVision m’a permis de redécouvrir la géographie de façon ludique et interactive. Bravo à l’équipe !”</p>
+                    <p>"GeoVision m'a permis de redécouvrir la géographie de façon ludique et interactive. Bravo à l'équipe !"</p>
                     <span>- Carlos, Professeur</span>
                 </div>
                 <div class="testimonial-card">
-                    <p>“Une plateforme intuitive et très utile pour mes révisions. Je recommande à tous les étudiants !”</p>
+                    <p>"Une plateforme intuitive et très utile pour mes révisions. Je recommande à tous les étudiants !"</p>
                     <span>- Sofia, Étudiante</span>
                 </div>
                 <div class="testimonial-card">
-                    <p>“Les quiz sont super fun et m’ont aidé à apprendre les capitales du monde.”</p>
+                    <p>"Les quiz sont super fun et m'ont aidé à apprendre les capitales du monde."</p>
                     <span>- Diego, Lycéen</span>
                 </div>
             </div>
@@ -466,7 +466,6 @@
                                 loading="lazy" 
                                 referrerpolicy="no-referrer-when-downgrade">
                         </iframe>
-
                     </div>
                 </div>
             </div>
@@ -484,10 +483,10 @@
                     </div>
                     <p>Explorez le monde autrement avec notre plateforme éducative interactive dédiée à la géographie mondiale.</p>
                     <div class="social-links">
-                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
                 <div class="footer-section">
@@ -523,15 +522,17 @@
             </div>
         </div>
     </footer>
-    <!-- Three.js core -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-<!-- Extensions (même version) -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/examples/js/loaders/GLTFLoader.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/examples/js/controls/OrbitControls.js"></script>
-<!-- Ton script principal -->
-<script src="js/main.js"></script>
-
-<!-- Main JavaScript File -->
-<script src="js/main.js"></script>
+    <!-- Demo Modal -->
+    <div id="demo-modal" class="modal" style="display:none;">
+        <div class="modal-content">
+            <span class="close-modal" id="close-demo-modal">&times;</span>
+            <h2>Démo GeoVision</h2>
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Démo GeoVision" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
 </body>
 </html>
+
