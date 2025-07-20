@@ -1605,3 +1605,105 @@ html {
     }
 }
 
+/* Modal Styles améliorés */
+.modal {
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(30, 41, 59, 0.75); /* plus doux */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: modal-fade-in 0.3s;
+}
+@keyframes modal-fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.modal-content {
+  background: #fff;
+  padding: 2.5rem 1.5rem 2rem 1.5rem;
+  border-radius: 18px;
+  max-width: 480px;
+  width: 95vw;
+  max-height: 90vh;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+  position: relative;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: modal-zoom-in 0.3s;
+}
+@keyframes modal-zoom-in {
+  from { transform: scale(0.85); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+.close-modal {
+  position: absolute;
+  top: 1.1rem;
+  right: 1.3rem;
+  font-size: 2.2rem;
+  color: #64748b;
+  cursor: pointer;
+  transition: color 0.2s, transform 0.2s;
+  font-weight: bold;
+  background: none;
+  border: none;
+  z-index: 10;
+}
+.close-modal:hover {
+  color: #e11d48;
+  transform: scale(1.15) rotate(8deg);
+}
+.modal-content h2 {
+  margin-top: 0.5rem;
+  margin-bottom: 1.2rem;
+  font-size: 2rem;
+  color: #2563eb;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+.video-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(30,41,59,0.10);
+  background: #f1f5f9;
+}
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-radius: 12px;
+}
+@media (max-width: 600px) {
+  .modal-content {
+    max-width: 98vw;
+    padding: 1.2rem 0.3rem 1.2rem 0.3rem;
+  }
+  .modal-content h2 {
+    font-size: 1.2rem;
+  }
+  .close-modal {
+    font-size: 1.5rem;
+    top: 0.7rem;
+    right: 0.7rem;
+  }
+  .video-container {
+    border-radius: 7px;
+  }
+  .video-container iframe {
+    border-radius: 7px;
+  }
+}
+
