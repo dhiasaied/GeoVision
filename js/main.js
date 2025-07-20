@@ -145,7 +145,7 @@ if (btnDemo && demoModal) {
     });
 }
 if (closeDemoModal && demoModal) {
-    closeDemoModal.addEventListener('click', function() {
+    closeDemoModal.addEventListener('click', function() {            
         demoModal.style.display = 'none';
     });
 }
